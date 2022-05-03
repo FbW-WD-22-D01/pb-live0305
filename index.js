@@ -32,3 +32,23 @@ console.log(test);
 let numToCut = 1.234
 console.log(numToCut.toFixed()); //erzeugt ein String und kürzt Nachkommstellen
 
+// Probleme bei zu großen Zahlen
+console.log(10**10000000); // wenn ihr zu große Zahlen habt erreicht ihr infinity
+
+// Infinity
+let unendlich = Infinity;
+console.log(typeof unendlich); //Inifinity ist eine undlich große Number
+
+console.log(10**1000 === Infinity); // Infinity kann behandelt werden wie eine Zahl
+
+// NaN
+console.log(NaN === NaN);
+let schwierig = NaN; // ist eine Number, kann aber nicht verglichen werden
+schwierig === NaN ? console.log('Wird niemals erscheinen') : console.log("Ist immer false");
+console.log(Number.isNaN(schwierig));
+
+// Exponentenschreibweise
+console.log(98e6);
+console.log(98e-6);
+
+
