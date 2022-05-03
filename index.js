@@ -23,31 +23,42 @@ console.log('Umwandlung in String:', zahl1.toString());
 console.log(parseFloat("1.2345em"));
 console.log(parseInt("1.234em"));
 
-
-// NUmber Object - verschiedene Funktionen bezüglich Zahlen
-const test = Number.isInteger("1");
-console.log(test);
-
 // toFixed()
 let numToCut = 1.234
 console.log(numToCut.toFixed()); //erzeugt ein String und kürzt Nachkommstellen
 
+
+// Number Object - verschiedene Funktionen bezüglich Zahlen
+let isInteger = Number.isInteger("1"); // überprüft ob es sich um eine Integer handelt - hier false
+let isNaN = Number.isNaN(1); // überprüft ob es sich um NaN handelt - hier false
+console.log(isInteger, isNaN);
+
+// Number hat auch statische Werte (größte Zahl etc.)
+console.log(Number.MAX_SAFE_INTEGER); //größte sicher zu rechnende Integer
+
+
+
 // Probleme bei zu großen Zahlen
 console.log(10**10000000); // wenn ihr zu große Zahlen habt erreicht ihr infinity
+
 
 // Infinity
 let unendlich = Infinity;
 console.log(typeof unendlich); //Inifinity ist eine undlich große Number
-
 console.log(10**1000 === Infinity); // Infinity kann behandelt werden wie eine Zahl
 
-// NaN
-console.log(NaN === NaN);
-let schwierig = NaN; // ist eine Number, kann aber nicht verglichen werden
-schwierig === NaN ? console.log('Wird niemals erscheinen') : console.log("Ist immer false");
-console.log(Number.isNaN(schwierig));
 
-// Exponentenschreibweise
+// NaN "Not a Number" - bei ungültigen (Zahlen-)Operationen wird dieser Wert erzeugt
+console.log(NaN === NaN); // Ist der einzige Wert der unglech sich selbst ist
+let schwierig = NaN; // ist eine Number, kann aber nicht verglichen werden
+console.log(typeof schwierig);
+
+schwierig === NaN ? console.log('Wird niemals erscheinen') : console.log("Ist immer false");
+console.log(Number.isNaN(schwierig)); //nur so lässt sich überprüfen ob der Wert NaN vorliegt
+
+
+
+// Exponentenschreibweise - zum Abbilden großer Zahlen
 console.log(98e6);
 console.log(98e-6);
 
@@ -82,13 +93,13 @@ console.log(Math.max(1,2,30,45,5)); //sucht die größte Zahl aus einer Zahlenre
 console.log(Math.min(23,45,2,3456)); //sucht die kleinste Zahl
 
 // random erzeugt eine Zufallszahl zwischen 0 und 1
-console.log('Zufallszahl zwischen 0 und 1:', MAth.random());
+console.log('Zufallszahl zwischen 0 und 1:', Math.random());
 
-// für größere Zufallszahl: multiplizieren mit der größten Zahl
+// für größere Zufallszahl: multiplizieren mit der größten gwünschten Zahl
 console.log(Math.random()*10);
 
 // Für eine ganze Zufallszahl mit Math.floor (zum Abrunden) kombinieren
-console.log("Zufallszahl:" ,Math.floor(Math.random()*10)); // erzeugt eine Zufallszahl zwischen 0-9
+console.log("Zufallszahl:" ,Math.floor(Math.random()*10)); // erzeugt eine Zufallszahl zwischen 0-9(!!)
 
 
 // BEISPIELE: 
