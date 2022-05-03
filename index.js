@@ -23,3 +23,12 @@ console.log('Umwandlung in String:', zahl1.toString());
 console.log(parseFloat("1.2345em"));
 console.log(parseInt("1.234em"));
 
+
+// NUmber Object - verschiedene Funktionen bezüglich Zahlen
+const test = Number.isInteger("1");
+console.log(test);
+
+// toFixed()
+let numToCut = 1.234
+console.log(numToCut.toFixed()); //erzeugt ein String und kürzt Nachkommstellen
+
