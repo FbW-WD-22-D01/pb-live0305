@@ -1,6 +1,6 @@
 // Nummern:
 
-let zahl1 = 11;
+let zahl1 = 2;
 let zahl2 = "12";
 
 // erzeugt einen neuen String
@@ -15,3 +15,11 @@ console.log(typeof numAusString);
 let hex = "ff";
 let newInteger = parseInt(hex, 16); 
 console.log(newInteger);
+
+// Das Gegenstück dazu
+console.log('Umwandlung in String:', zahl1.toString());
+
+// parseFloat vs parseInt
+console.log(parseFloat("1.2345em"));
+console.log(parseInt("1.234em"));
+
