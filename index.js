@@ -82,8 +82,16 @@ console.log(Math.max(1,2,30,45,5)); //sucht die größte Zahl aus einer Zahlenre
 console.log(Math.min(23,45,2,3456)); //sucht die kleinste Zahl
 
 // random erzeugt eine Zufallszahl zwischen 0 und 1
+console.log('Zufallszahl zwischen 0 und 1:', MAth.random());
+
+// für größere Zufallszahl: multiplizieren mit der größten Zahl
+console.log(Math.random()*10);
+
+// Für eine ganze Zufallszahl mit Math.floor (zum Abrunden) kombinieren
 console.log("Zufallszahl:" ,Math.floor(Math.random()*10)); // erzeugt eine Zufallszahl zwischen 0-9
 
+
+// BEISPIELE: 
 
 // Zahlenraten
 let meineZahl = 2
@@ -91,7 +99,7 @@ let random = Math.floor(Math.random()*10);
 meineZahl === random ? console.log('Gewonnen') : console.log('Verloren!');
 
 
-// Farbgenerator rgb
+// Farbgenerator rgb --erzeuge eine random rgb Farbe
 let beispielfarbe = "rgb(255,255,255)";
 
 let rot = Math.floor(Math.random()*256);
